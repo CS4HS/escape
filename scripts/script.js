@@ -11,6 +11,6 @@ function runAlgo(){
     locations = ["alderaan", "jedha", "kamino", "coruscant", "naboo", "endor", "mustafar", "tatooine"];
     var data = document.getElementById("location").value;
     console.log(data);
-    alert(data);
+    //alert(data);
     localStorage.setItem("location", data);
 }

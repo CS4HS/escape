@@ -14,7 +14,7 @@ function move() {
     var width = 1;
     var id = setInterval(frame, 100);
     function frame() {
-      if (width >= 50) {
+      if (width >= 100) {
         clearInterval(id);
         document.getElementById('content').style.display='block';
         i = 0;
@@ -35,9 +35,9 @@ function findResult(){
         var answer = "no";
 
     move();
-    console.log(data);
-    console.log(answer);
-    document.getElementById("answer-goes-here").innerHTML = answer;
+    //console.log(data);
+    //console.log(answer);
+    document.getElementById("answer-goes-here").innerHTML = data + ": " + answer;
 }
 findResult();
 
