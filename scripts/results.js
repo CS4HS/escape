@@ -29,7 +29,7 @@ function move() {
 function findResult(){
     locations = ["alderaan", "jedha", "kamino", "coruscant", "naboo", "endor", "mustafar", "tatooine"];
     var data = localStorage.getItem("location");
-    if (data==locations[0]){
+    if (data.toLowerCase()==locations[0]){
         var answer = "yes";
     } else
         var answer = "no";
