@@ -2,44 +2,17 @@
 // Your own functions here
 //---------------------------------
 
-function sayHello() {
-    //do something
-}
-//sayHello();    //invoke function
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 100);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        document.getElementById('content').style.display='block';
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
-    }
+function showResults(){
+  var result = localStorage.getItem("answer");
+  if (result == "yes"){
+    msg = "The Queen is here."
+    msg += "<br> <br> <img src= images/queen.png>"
+    document.getElementById("result-goes-here").innerHTML = msg;
+  }
+  else {
+    msg = "The Queen is not here."
+    msg += "<br> <br> <img src= images/troopers.png>"
+    document.getElementById("result-goes-here").innerHTML = msg;
   }
 }
-
-function findResult(){
-    locations = ["alderaan", "jedha", "kamino", "coruscant", "naboo", "endor", "mustafar", "tatooine"];
-    var data = localStorage.getItem("location");
-    if (data.toLowerCase()==locations[0]){
-        var answer = "yes";
-    } else
-        var answer = "no";
-
-    move();
-    //console.log(data);
-    //console.log(answer);
-    document.getElementById("answer-goes-here").innerHTML = data + ": " + answer;
-}
-findResult();
-
-
-
+showResults();
