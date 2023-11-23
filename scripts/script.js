@@ -5,7 +5,8 @@ function runAlgo(){
     locations = ["alderaan", "jedha", "kamino", "coruscant", "naboo", "endor", "mustafar", "tatooine"];
     var data = document.getElementById("location").value;
     console.log(data);
-    if (data.toLowerCase() == locations[0]) {
+    if (data.toLowerCase() == "two"
+      || (data == 2)) {
       var answer = "yes";
       console.log(answer);
     } else {
